@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive Input Example</title>
+</head>
+<body>
+
+    <h2>Enter Something</h2>
+    <input type="text" id="Input" placeholder="Type here...">
+    <button onclick="decisionInput()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function decisionInput() {
+            // Get the value from the input field
+            const input = document.getElementById('Input').value;
+            const inputValue = parseFloat(input); // Convert input to a number
+            var decision; // Declare a variable to store the decision
+
+            // ตัวอย่างการใช้ if-else
+            if (inputValue > 0) {
+                decision = "positive";
+            } else if (inputValue < 0) {
+                decision = "negative";
+            } else {
+                decisionn = "zero";
+            }
+
+            // สามารถเขียน แบบสั้นๆ ได้นะ
+            decision = inputValue > 0 ? "positive" : (inputValue < 0 ? "negative" : "zero");
+
+            // Display the input value in the paragraph
+            document.getElementById('output').innerText = "You entered: " + decision;
+
+            // You can also use inputValue for further processing here
+            console.log("User input is:", input);
+        }
+    </script>
+
+</body>
+</html>

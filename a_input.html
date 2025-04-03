@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive Input Example</title>
+</head>
+<body>
+
+    <h2>Enter Something</h2>
+    <input type="text" id="Input" placeholder="Type here...">
+    <button onclick="getInput()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function getInput() {
+            // Get the value from the input field
+            const input = document.getElementById('Input').value;
+
+            // Display the input value in the paragraph
+            document.getElementById('output').innerText = "You entered: " + input;
+
+            // You can also use inputValue for further processing here
+            console.log("User input is:", input);
+        }
+    </script>
+
+</body>
+</html>

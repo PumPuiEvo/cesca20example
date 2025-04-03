@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive Input Example</title>
+</head>
+<body>
+
+    <h2>Enter Something</h2>
+    <input type="text" id="Input" placeholder="Type here...">
+    <button onclick="decisionInput()">Submit</button>
+
+    <p id="output"></p>
+    <p id="output2"></p>
+
+    <script>
+        function decisionInput() {
+            // Get the value from the input field
+            const input = document.getElementById('Input').value;
+            const inputValue = parseFloat(input); // Convert input to a number
+            let decision; // Declare a variable to store the decision
+
+            if (inputValue > 0) {
+                decision = "positive";
+            } else if (inputValue < 0) {
+                decision = "negative";
+            } else if (inputValue === 0) {
+                decision = "zero";
+            } else {
+                decision = "not a number"; // กรณีที่ไม่ใช่ตัวเลข
+            }
+
+            // Display the input value in the paragraph
+            document.getElementById('output').innerText = "You entered: " + decision;
+            document.getElementById('output2').innerText = "And you entered the number: " + inputValue;
+
+            // You can also use inputValue for further processing here
+            console.log("User input is:", input);
+        }
+    </script>
+
+</body>
+</html>
