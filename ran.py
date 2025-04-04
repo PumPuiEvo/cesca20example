@@ -19,12 +19,12 @@ def pick_random_data(dummy_array, num_picks):
 
 if __name__ == "__main__":
     dummy_array = [""
-    "Game Desing 1", 
-    "Game Desing 2", 
-    "Database 1", 
-    "Database 2", 
-    "Basic Digital 1", 
-    "Basic Digital 2",]
+    "พั้นรักแมว Game Design", 
+    "Database 1 ชื่อกลุ่ม", 
+    "Game Design 1", 
+    "Kelpie ปี้ ปิ๊ด", 
+    "Digital 1 ไม่บอกอย่าหลอกถาม", 
+    "DATABASE 2 นะจ๊ะ",]
 
     random_data = pick_random_data(dummy_array, 6)
     print("Randomly picked data:", random_data)
